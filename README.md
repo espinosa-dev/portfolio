@@ -1,2 +1,2 @@
-# Mi portafolio!
-Este es mi portafolio.
+# Mi portfolio!
+Este es mi portfolio.
