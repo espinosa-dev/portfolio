@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Llumor",
             description: "Desarrollo completo de la página web corporativa para Llumor, una empresa local. Diseño visual, estructura e implementación responsive.",
             tags: ["HTML", "CSS", "JavaScript", "Responsive"],
-            repoLink: "https://github.com/espinosa-dev",
+            repoLink: "https://vicentelluchllumor.com",
             demoLink: "https://vicentelluchllumor.com",
             language: "HTML"
         },
@@ -133,5 +133,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Contact Button Logic - Copy to Clipboard
+    const emailBtn = document.getElementById('btn-email');
+    if (emailBtn) {
+        emailBtn.addEventListener('click', function(e) {
+            // Allow default mailto behavior, but also copy to clipboard
+            const email = "alvaroespinosamontesinos@gmail.com";
+            
+            // Try specific Clipboard API with fallback
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email).then(() => {
+                    showFeedback(this);
+                }).catch(err => {
+                    console.error('Error al copiar: ', err);
+                });
+            } else {
+                // Fallback
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    showFeedback(this);
+                } catch (err) {
+                    console.error('Error al copiar: ', err);
+                }
+                document.body.removeChild(textarea);
+            }
+        });
+    }
+
+    function showFeedback(button) {
+        const originalText = button.textContent;
+        button.textContent = "¡Email Copiado!";
+        button.style.backgroundColor = "#22c55e"; // Green color
+        button.style.color = "#fff";
+        button.style.borderColor = "#22c55e";
+        
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.style.backgroundColor = ""; // Reset to CSS default
+            button.style.color = "";
+            button.style.borderColor = "";
+        }, 2000);
+    }
 });
 
