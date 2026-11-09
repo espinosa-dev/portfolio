@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assests/logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <img src="./img/yo.png"
+                <img src="./assests/yo.png"
                     style="width: 200px; border-radius: 50%; border: 4px solid #38bdf8; display: inline-block; margin-top: -100px; padding-top: 20px;"
                     alt="Foto de perfil">
                 <h1>Álvaro<span class="highlight"> Espinosa</span></h1>
@@ -45,7 +46,7 @@
                 <div class="social-links">
                     <a href="https://github.com/espinosa-dev" target="_blank" aria-label="GitHub"><i
                             class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/%C3%A1lvaro-espinosa-b84555316/" target="_blank"
+                    <a href="https://www.linkedin.com/in/alvaroespinosamontesinos/" target="_blank"
                         aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <a href="#projects" class="btn primary-btn">Ver Mis Trabajos</a>
@@ -132,15 +133,29 @@
                         <div class="certificacion">
                             <h2>Curso de Java y Programación Orientada a Objetos (POO)</h2>
                             <p class="author">MoureDev</p>
-                            <img src="./img/cert1.jpg" alt="Certificación 1"><br>
+                            <img src="./assests/cert1.jpg" alt="Certificación de Java y Programación Orientada a Objetos">
                             <a href="https://campus.mouredev.pro/certificates/nntubv0qxw" target="_blank"><button>Ver
                                     Certificado</button></a>
                         </div>
                         <div class="certificacion">
                             <h2>Curso de JavaScript desde Cero</h2>
                             <p class="author">MoureDev</p>
-                            <img src="./img/cert2.jpg" alt="Certificación 2"><br>
+                            <img src="./assests/cert2.jpg" alt="Certificación de JavaScript">
                             <a href="https://campus.mouredev.pro/certificates/05oeuwd3cb" target="_blank"><button>Ver
+                                    Certificado</button></a>
+                        </div>
+                        <div class="certificacion">
+                            <h2>Desarrollo con IA: De 0 a producción</h2>
+                            <p class="author">BIG School</p>
+                            <img src="./assests/cert3.jpg" alt="Certificación de Desarrollo con IA: de 0 a producción">
+                            <a href="https://media.licdn.com/dms/image/v2/D4E2DAQHGfFXS7qrfDg/profile-treasury-document-cover-images_1920/B4EZztbZU6GwBM-/0/1773509911259?e=1794855600&v=beta&t=sxKFajZKG3qo366tP5rOS3eFWcsc204h1R91ObbLlg0" target="_blank"><button>Ver
+                                    Certificado</button></a>
+                        </div>
+                        <div class="certificacion">
+                            <h2>Desarrollo con IA</h2>
+                            <p class="author">BIG School</p>
+                            <img src="./assests/cert4.jpg" alt="Certificación de Desarrollo con IA">
+                            <a href="https://media.licdn.com/dms/image/v2/D4E2DAQENqOu0VhCrwQ/profile-treasury-document-cover-images_1280/B4EaF39CRjIoBA-/0/1793013853801?e=1794855600&v=beta&t=GhvncuR7iT5GiykZT58sOpjjkbY1-jOK_iNcZkm3C8Q" target="_blank"><button>Ver
                                     Certificado</button></a>
                         </div>
                     </div>
@@ -159,7 +174,7 @@
                         </div>
                         <div class="idioma">
                             <h2>Inglés</h2>
-                            <p class="author">B1 - Cambridge</p>
+                            <p class="author">B2 - Cambridge</p>
                         </div>
                     </div>
                 </div>
@@ -168,48 +183,40 @@
 
         <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title">Skills</h2>
-
                 <div class="subsection">
                     <h3>Hard Skills</h3>
-                    <div class="skills-tags">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Wordpress</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">MARKDOWN</span>
-                        <span class="skill-tag">Photoshop</span>
-                        <span class="skill-tag">Trello</span>
-                        <span class="skill-tag">GitHub Projects</span>
-                        <span class="skill-tag">Kanban</span>
-                        <span class="skill-tag">Aplicaciones Ofimáticas</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">IA</span>
-                        <span class="skill-tag">Consultas SQL</span>
-                        <span class="skill-tag">VirtualBox</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">JSON</span>
-                        <span class="skill-tag">IntelliJ</span>
-                        <span class="skill-tag">Visual Studio Code</span>
-                        <span class="skill-tag">Antigravity</span>
+                    <div class="hard-skills-panel">
+                        <div class="skill-filters" role="group" aria-label="Filtrar habilidades por categoría">
+                            <div class="skill-filter-buttons">
+                                <button class="skill-filter active" type="button" data-category="Todas" aria-pressed="true">Todas</button>
+                                <button class="skill-filter" type="button" data-category="Lenguajes de programación y marcado" aria-pressed="false">Lenguajes de programación y marcado</button>
+                                <button class="skill-filter" type="button" data-category="Frameworks y Entornos de ejecución" aria-pressed="false">Frameworks y Entornos de ejecución</button>
+                                <button class="skill-filter" type="button" data-category="SGBD" aria-pressed="false">SGBD</button>
+                                <button class="skill-filter" type="button" data-category="Plataformas y Despliegue (Cloud/Hosting)" aria-pressed="false">Plataformas y Despliegue (Cloud/Hosting)</button>
+                                <button class="skill-filter" type="button" data-category="Herramientas y DevOps" aria-pressed="false">Herramientas y DevOps</button>
+                                <button class="skill-filter" type="button" data-category="Shells y Scripting" aria-pressed="false">Shells y Scripting</button>
+                                <button class="skill-filter" type="button" data-category="IDEs y Editores" aria-pressed="false">IDEs y Editores</button>
+                                <button class="skill-filter" type="button" data-category="Diseño y Edición" aria-pressed="false">Diseño y Edición</button>
+                                <button class="skill-filter" type="button" data-category="Planificación y Documentación" aria-pressed="false">Planificación y Documentación</button>
+                                <button class="skill-filter" type="button" data-category="Sistemas Operativos" aria-pressed="false">Sistemas Operativos</button>
+                            </div>
+                        </div>
+                        <div class="hard-skills-grid" id="hard-skills-grid"></div>
                     </div>
                 </div>
 
                 <div class="subsection">
                     <h3>Soft Skills</h3>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Creatividad</span>
-                        <span class="skill-tag">Organización</span>
-                        <span class="skill-tag">Trabajo en equipo</span>
-                        <span class="skill-tag">Resolución de problemas</span>
-                        <span class="skill-tag">Adaptabilidad</span>
-                        <span class="skill-tag">Comunicación</span>
-                        <span class="skill-tag">Disciplina</span>
-                        <span class="skill-tag">Trabajo bajo presión</span>
-                    </div>
+                    <ul class="soft-skills-list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Creatividad</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Organización</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Trabajo en equipo</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Resolución de problemas</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Adaptabilidad</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Comunicación</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Disciplina</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i>Trabajo bajo presión</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -229,6 +236,7 @@
                 <h2 class="section-title">Contacto</h2>
                 <div class="contact-grid">
                     <div class="contact-column">
+                        <h3>Contacto directo</h3>
                         <div class="contact-info">
                             <p><i class="fas fa-envelope"></i> alvaroespinosamontesinos@gmail.com</p>
                             <p><i class="fas fa-map-marker-alt"></i> Valencia, España</p>
@@ -237,18 +245,17 @@
                             class="btn primary-btn btn-contact">Contactar</a>
                     </div>
                     <div class="contact-column">
-                        <h3>CV</h3>
-                        <p class="section-desc" style="margin-bottom: 1.5rem;">Descarga mi currículum para ver mi
-                            experiencia detallada.</p>
-                        <a href="./img/CV.pdf" download class="btn primary-btn btn-contact">Descargar CV</a>
+                        <h3>Currículum</h3>
+                        <p class="contact-description">Descarga mi currículum para ver mi experiencia detallada.</p>
+                        <a href="./assests/CV.pdf" download class="btn primary-btn btn-contact">Descargar CV</a>
                     </div>
-                    <div class="contact-column">
+                    <!-- <div class="contact-column">
                         <h3>Europass</h3>
                         <p class="section-desc" style="margin-bottom: 1.5rem;">Descarga mi currículum en formato
                             Europass.</p>
-                        <a href="./img/CV-europass.pdf" download class="btn primary-btn btn-contact">Descargar
+                        <a href="./assests/CV-europass.pdf" download class="btn primary-btn btn-contact">Descargar
                             Europass</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>

@@ -105,6 +105,81 @@ document.addEventListener('DOMContentLoaded', () => {
         return colors[language] || '#8e969a';
     }
 
+    const hardSkills = [
+        { name: 'Kotlin', category: 'Lenguajes de programación y marcado', icon: 'devicon-kotlin-plain colored' },
+        { name: 'Java', category: 'Lenguajes de programación y marcado', icon: 'devicon-java-plain colored' },
+        { name: 'JavaScript', category: 'Lenguajes de programación y marcado', icon: 'devicon-javascript-plain colored' },
+        { name: 'Python', category: 'Lenguajes de programación y marcado', icon: 'devicon-python-plain colored' },
+        { name: 'C', category: 'Lenguajes de programación y marcado', icon: 'devicon-c-plain colored' },
+        { name: 'HTML', category: 'Lenguajes de programación y marcado', icon: 'devicon-html5-plain colored' },
+        { name: 'CSS', category: 'Lenguajes de programación y marcado', icon: 'devicon-css3-plain colored' },
+        { name: 'Markdown', category: 'Lenguajes de programación y marcado', icon: 'devicon-markdown-original' },
+        { name: 'Spring', category: 'Frameworks y Entornos de ejecución', icon: 'devicon-spring-original colored' },
+        { name: 'Electron', category: 'Frameworks y Entornos de ejecución', icon: 'devicon-electron-original colored' },
+        { name: 'Node.js', category: 'Frameworks y Entornos de ejecución', icon: 'devicon-nodejs-plain colored' },
+        { name: 'MySQL', category: 'SGBD', icon: 'devicon-mysql-plain colored' },
+        { name: 'MongoDB', category: 'SGBD', icon: 'devicon-mongodb-plain colored' },
+        { name: 'Firebase', category: 'SGBD', icon: 'devicon-firebase-plain colored' },
+        { name: 'AWS', category: 'Plataformas y Despliegue (Cloud/Hosting)', icon: 'devicon-amazonwebservices-plain-wordmark colored' },
+        { name: 'Vercel', category: 'Plataformas y Despliegue (Cloud/Hosting)', icon: 'devicon-vercel-original' },
+        { name: 'GitHub', category: 'Plataformas y Despliegue (Cloud/Hosting)', icon: 'devicon-github-original' },
+        { name: 'WordPress', category: 'Plataformas y Despliegue (Cloud/Hosting)', icon: 'devicon-wordpress-plain colored' },
+        { name: 'Docker', category: 'Herramientas y DevOps', icon: 'devicon-docker-plain colored' },
+        { name: 'Git', category: 'Herramientas y DevOps', icon: 'devicon-git-plain colored' },
+        { name: 'npm', category: 'Herramientas y DevOps', icon: 'devicon-npm-original-wordmark colored' },
+        { name: 'Gradle', category: 'Herramientas y DevOps', icon: 'devicon-gradle-plain colored' },
+        { name: 'Bash', category: 'Shells y Scripting', icon: 'devicon-bash-plain' },
+        { name: 'PowerShell', category: 'Shells y Scripting', icon: 'fas fa-terminal' },
+        { name: 'Visual Studio Code', category: 'IDEs y Editores', icon: 'devicon-vscode-plain colored' },
+        { name: 'IntelliJ IDEA', category: 'IDEs y Editores', icon: 'devicon-intellij-plain colored' },
+        { name: 'Android Studio', category: 'IDEs y Editores', icon: 'devicon-androidstudio-plain colored' },
+        { name: 'PyCharm', category: 'IDEs y Editores', icon: 'devicon-pycharm-plain colored' },
+        { name: 'Figma', category: 'Diseño y Edición', icon: 'devicon-figma-plain colored' },
+        { name: 'Photoshop', category: 'Diseño y Edición', icon: 'devicon-photoshop-plain colored' },
+        { name: 'Notion', category: 'Planificación y Documentación', icon: 'devicon-notion-plain' },
+        { name: 'Linux', category: 'Sistemas Operativos', icon: 'devicon-linux-plain colored' },
+        { name: 'Windows', category: 'Sistemas Operativos', icon: 'devicon-windows8-original colored' }
+    ];
+
+    const hardSkillsGrid = document.getElementById('hard-skills-grid');
+    const skillFilters = document.querySelectorAll('.skill-filter');
+
+    function displayHardSkills(category = 'Todas') {
+        if (!hardSkillsGrid) return;
+
+        hardSkillsGrid.replaceChildren();
+        hardSkills
+            .filter(skill => category === 'Todas' || skill.category === category)
+            .forEach(skill => {
+                const card = document.createElement('div');
+                card.className = 'hard-skill-card';
+
+                const icon = document.createElement('i');
+                icon.className = skill.icon;
+                icon.setAttribute('aria-hidden', 'true');
+
+                const name = document.createElement('span');
+                name.textContent = skill.name;
+
+                card.append(icon, name);
+                hardSkillsGrid.appendChild(card);
+            });
+    }
+
+    skillFilters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            const selectedCategory = filter.dataset.category;
+            displayHardSkills(selectedCategory);
+
+            skillFilters.forEach(button => {
+                const isSelected = button === filter;
+                button.classList.toggle('active', isSelected);
+                button.setAttribute('aria-pressed', String(isSelected));
+            });
+        });
+    });
+
+    displayHardSkills();
     displayProjects(projects);
 
     
@@ -180,4 +255,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     }
 });
-
